@@ -1,0 +1,631 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Poiret+One&display=swap');
+
+/* 전체설정 */
+*{
+    margin: 0;
+    padding: 0;
+}
+ul{
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+    color: #000;
+    font-family: 'Poiret One', cursive;
+}
+img{
+    border: 0;
+    vertical-align: bottom;
+}
+
+/* 레이아웃설정 */
+header{
+    width: 15%;
+    height: 100%;
+    position: fixed;
+    background-color: #fff;
+    font-family: 'Poiret One', cursive;
+}
+nav{
+    width: 85%;
+    height: 35px;
+    background-color: #212121;
+    margin-left: 15%;
+}
+section{
+    width: 85%;
+    height: auto;
+    background-color: aqua;
+    margin-left: 15%;
+}
+article{
+    height: 350px;
+    float: left;
+    width: 20%;
+}
+article:nth-child(1){
+    background-color: #ddd;
+    width: 60%;
+    height: 700px;
+}
+article:nth-child(2){
+    background-color: #bbb;
+    width: 40%;
+}
+article:nth-child(3){
+    background-color: #ccc;
+}
+article:nth-child(4){
+    background-color: #aaa;
+}
+article:nth-child(5){
+    background-color: #eee;
+}
+article:nth-child(6){
+    background-color: #fff;
+    width: 40%;
+}
+article:nth-child(7){
+    background-color: #111;
+}
+article:nth-child(8){
+    background-color: #222;
+}
+article:nth-child(9){
+    background-color: #333;
+    width: 40%;
+}
+article:nth-child(10){
+background-color: #444;
+}
+article:nth-child(11){
+    background-color: #555;
+}
+article:nth-child(12){
+    background-color: #666;
+}
+
+
+/* header 콘텐츠 */
+header h1{
+    background-image: url(../img/logo1.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 180px;
+    height: 136px;
+    position: absolute;
+    left: 50%;
+    margin-left: -90px;
+    top: 70px;
+    text-indent: -9999px;
+}
+#gnb{
+    position: absolute;
+    top: 50%;
+    margin-top: -100px;
+    width: 100%;
+    right: 0;
+}
+#gnb li{
+}
+#gnb a{
+    display: block;
+    padding: 8px 30px;
+    font-size: 22px;
+    font-weight: bold;
+    color: #555;
+    line-height: 1.8;
+    text-align: center;
+}
+
+.snsSet{
+    position: absolute;
+    bottom: 50px;
+    width: 90px;
+    right: 50%;
+    margin-right: -45px;
+}
+.snsSet a{
+    float: left;
+}
+.snsSet img{
+
+}
+
+/* nav 컨텐츠 설정 */
+nav{
+    position: relative;
+}
+nav a{
+    position: absolute;
+    top: 5px;
+}
+nav img{
+    max-width: 100%;
+}
+nav a:nth-child(1){
+    left: 10px;
+}
+nav a:nth-child(2){
+    right: 10px;
+}
+nav a:nth-child(3){
+    left: 150px;
+}
+nav a:nth-child(4){
+    right: 96px;
+}
+
+/* 배경이미지 삽입 */
+.bg{
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+    overflow: hidden;
+}
+.bg span{
+    font-size: 60px;
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    color: #fff;
+    font-family: 'Poiret One', cursive;
+    opacity: 0;
+    transform: scale(10);
+    transition: all 0.5s;
+}
+
+article:nth-child(1) div{
+    background-image: url(../img/pic1.jpg);
+}
+article:nth-child(1) span{
+    font-size: 170px;
+    opacity: 1;
+    transform: scale(1);
+    bottom: -50px;
+}
+article:nth-child(4) div{
+    background-image: url(../img/pic2.jpg);
+}
+article:nth-child(5) div{
+    background-image: url(../img/pic3.jpg);
+}
+article:nth-child(7) div{
+    background-image: url(../img/pic4.jpg);
+}
+article:nth-child(9) div{
+    background-image: url(../img/pic5.jpg);
+}
+article:nth-child(10) div{
+    background-image: url(../img/pic6.jpg);
+}
+article:nth-child(12) div{
+    background-image: url(../img/pic7.jpg);
+}
+
+article:hover span{
+    opacity: 1;
+    transform: scale(1);
+}
+article:nth-child(1):hover span{
+    color: black;
+}
+
+
+
+
+
+
+/* 배경글씨 조절 */
+
+
+
+
+
+
+
+/* 텍스트 삽입 */
+.txt{
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    padding: 40px 30px;
+    box-sizing: border-box;
+    color: #000;
+    background-color: #FFF;
+    font-family: 'Poiret One', cursive;
+}
+article strong{
+    display: block;
+    font-size: 30px;
+}
+article em{
+    font-size: 16px;
+    margin-top: 10px;
+    display: block;
+}
+
+article:nth-child(3) div{
+    background-color: #bff7fa;
+    color: #fff;
+}
+article:nth-child(11) div{
+    background-color: #e3f1fb;
+    color: #fff;
+}
+
+
+/* 미디어쿼리구간설정 ##################################################################*/
+
+/* 1280px이상 1599px이하 구간 -----------------------1번구간*/
+@media(min-width:1280px) and (max-width:1599px){
+    header{
+        width: 100%;
+        height: 80px;
+        position: relative;
+        background-color: antiquewhite;
+    }
+    nav{
+        width: 100%;
+        height: 35px;
+        background-color: #000;
+        margin-left: 0;
+    }
+    section{
+        width: 100%;
+        height: auto;
+        background-color: aqua;
+        margin-left: 0;
+    }
+}
+
+/* 1024px이상 1279px이하 구간 -------------------------2번구간*/
+@media(min-width:1024px) and (max-width:1279px){
+    header h1{
+        background-image: url(../img/logo2.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 200px;
+        height: 40px;
+        position: absolute;
+        left: 20px;
+        margin-left: 0px;
+        top: 20px;
+        text-indent: -99999px;
+    }
+    #gnb{
+        position: absolute;
+        top: 20px;
+        margin-top: 0px;
+        width: auto;
+        right: 0;
+    }
+    #gnb li{
+        position: absolute;
+        
+    }
+    #gnb a{
+        display: block;
+        padding: 8px 30px;
+        font-size: 22px;
+        font-weight: bold;
+        color: #555;
+        line-height: 1.8;
+    }
+    
+    .snsSet{
+        position: absolute;
+        bottom: 50px;
+        width: 90px;
+        right: 50%;
+        margin-right: -45px;
+    }
+    .snsSet a{
+        float: left;
+    }
+    .snsSet img{}
+    
+    header{
+        width: 100%;
+        height: 80px;
+        position: relative;
+        background-color: antiquewhite;
+    }
+    nav{
+        width: 100%;
+        height: 35px;
+        background-color: #000;
+        margin-left: 0;
+    }
+    section{
+        width: 100%;
+        height: auto;
+        background-color: aqua;
+        margin-left: 0;
+    }
+
+    article{
+        height: 260px;
+        float: left;
+        width: 25%;
+    }
+    article:nth-child(1){
+        background-color: #ddd;
+        width: 75%;
+        height: 520px;
+    }
+    article:nth-child(2){
+        background-color: #bbb;
+        width: 25%;
+    }
+    article:nth-child(3){
+        background-color: #ccc;
+        width: 25%;
+    }
+    article:nth-child(4){
+        background-color: #aaa;
+        width: 25%;
+    }
+    article:nth-child(5){
+        background-color: #eee;
+        width: 25%;
+    }
+    article:nth-child(6){
+        background-color: #fff;
+        width: 50%;
+    }
+    article:nth-child(7){
+        background-color: #111;
+        width: 50%;
+    }
+    article:nth-child(8){
+        background-color: #222;
+        width: 25%;
+    }
+    article:nth-child(9){
+        background-color: #333;
+        width: 25%;
+    }
+    article:nth-child(10){
+        background-color: #444;
+        width: 50%;
+    }
+    article:nth-child(11){
+        background-color: #555;
+    }
+    article:nth-child(12){
+        background-color: #666;
+    }
+}
+
+/* 780px이상 1023px이하 구간 ---------------------------3번구간*/
+@media(min-width:780px) and (max-width:1023px){
+    header{
+        width: 100%;
+        height: 80px;
+        position: relative;
+        background-color: antiquewhite;
+    }
+    nav{
+        width: 100%;
+        height: 35px;
+        background-color: #000;
+        margin-left: 0;
+    }
+    section{
+        width: 100%;
+        height: auto;
+        background-color: aqua;
+        margin-left: 0;
+    }
+
+    article{
+        height: 260px;
+        float: left;
+        width: 33.3333%;
+    }
+    article:nth-child(1){
+        background-color: #ddd;
+        width: 100%;
+        height: 400px;
+    }
+    article:nth-child(2){
+        background-color: #bbb;
+        width: 66.6666%;
+    }
+    article:nth-child(3){
+        background-color: #ccc;
+    }
+    article:nth-child(4){
+        background-color: #aaa;
+        display: none;
+    }
+    article:nth-child(5){
+        background-color: #eee;
+    }
+    article:nth-child(6){
+        background-color: #fff;
+        width: 66.6666%;
+    }
+    article:nth-child(7){
+        background-color: #111;
+        display: none;
+    }
+    article:nth-child(8){
+        background-color: #222;
+    }
+    article:nth-child(9){
+        background-color: #333;
+        width: 33.3333%;
+    }
+    article:nth-child(10){
+        background-color: #444;
+        display: none;
+    }
+    article:nth-child(11){
+        background-color: #555;
+    }
+    article:nth-child(12){
+        background-color: #666;
+        display: none;
+    }
+}
+
+/* 640px이상 779px이하 구간 -----------------------------4번구간*/
+@media(min-width:640px) and (max-width:779px){
+    header{
+        width: 100%;
+        height: 80px;
+        position: relative;
+        background-color: antiquewhite;
+    }
+    nav{
+        width: 100%;
+        height: 35px;
+        background-color: #000;
+        margin-left: 0;
+    }
+    section{
+        width: 100%;
+        height: auto;
+        background-color: aqua;
+        margin-left: 0;
+    }
+
+    article{
+        height: 260px;
+        float: left;
+        width: 50%;
+    }
+    article:nth-child(1){
+        background-color: #ddd;
+        width: 100%;
+        height: 400px;
+    }
+    article:nth-child(2){
+        background-color: #bbb;
+        width: 100%;
+    }
+    article:nth-child(3){
+        background-color: #ccc;
+        display: none;
+    }
+    article:nth-child(4){
+        background-color: #aaa;
+        display: none;
+    }
+    article:nth-child(5){
+        background-color: #eee;
+    }
+    article:nth-child(6){
+        background-color: #fff;
+    }
+    article:nth-child(7){
+        background-color: #111;
+        display: none;
+    }
+    article:nth-child(8){
+        background-color: #222;
+    }
+    article:nth-child(9){
+        background-color: #333;
+        width: 50%;
+    }
+    article:nth-child(10){
+        background-color: #444;
+        display: none;
+    }
+    article:nth-child(11){
+        background-color: #555;
+    }
+    article:nth-child(12){
+        background-color: #666;
+    }
+}
+
+/* 480px이상 639px이하 구간-----------------------------5번구간 */
+@media(min-width:480px) and (max-width:639px){
+    header{
+        width: 100%;
+        height: 130px;
+        position: relative;
+        background-color: antiquewhite;
+    }
+    nav{
+        width: 100%;
+        height: 35px;
+        background-color: #000;
+        margin-left: 0;
+        display: none;
+    }
+    section{
+        width: 100%;
+        height: auto;
+        background-color: aqua;
+        margin-left: 0;
+    }
+
+    article{
+        height: 150px;
+        float: left;
+        width: 50%;
+    }
+    article:nth-child(1){
+        background-color: #ddd;
+        width: 100%;
+        height: 300px;
+    }
+    article:nth-child(2){
+        background-color: #bbb;
+        width: 100%;
+    }
+    article:nth-child(3){
+        background-color: #ccc;
+        display: none;
+    }
+    article:nth-child(4){
+        background-color: #aaa;
+        display: none;
+    }
+    article:nth-child(5){
+        background-color: #eee;
+    }
+    article:nth-child(6){
+        background-color: #fff;
+    }
+    article:nth-child(7){
+        background-color: #111;
+        display: none;
+    }
+    article:nth-child(8){
+        background-color: #222;
+    }
+    article:nth-child(9){
+        background-color: #333;
+        width: 50%;
+    }
+    article:nth-child(10){
+        background-color: #444;
+        display: none;
+    }
+    article:nth-child(11){
+        background-color: #555;
+    }
+    article:nth-child(12){
+        background-color: #666;
+    }
+}
+
+/* 479px이하 구간 */
+@media(max-width:479px){
+    header{
+        position: fixed;
+        width: 100%;
+        height: 100%;
+    }
+}
