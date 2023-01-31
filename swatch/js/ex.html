@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div class="box1">
+        <div class="point"></div>
+        <div class="box"></div>
+        <div class="boxy"></div>
+        <div class="boxg"></div>
+
+    </div>
+
+
+
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        .box1{
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            background-color: beige
+        }
+        .box{
+            width: 300px;
+            height: 300px;
+            background-color: blue;
+            font-size: 60px;
+            color: #fff;
+        }
+        .point{
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background-color: red;
+            border-radius: 50%;
+            left: 0;
+            top: 0;
+            pointer-events: none;
+        }
+        .point.on{
+            width: 10px;
+            height: 10px;
+        }
+        .point.on2{
+            width: 200px;
+            height: 100px;
+        }
+        .point.on3{
+            width: 150px;
+            height: 250px;
+        }
+
+        .boxy{
+            width: 300px;
+            height: 300px;
+            background-color: yellow;
+            font-size: 60px;
+            color: #fff;
+        }
+        .boxg{
+            width: 300px;
+            height: 300px;
+            background-color: green;
+            font-size: 60px;
+            color: #fff;
+        }
+    </style>
+
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+
+<script>
+    $(document).ready(function(){
+        // window에서 마우스가 움직였을 때 박스에 움직임이라는 단어가 나와라
+        $(window).mousemove(function(e){
+
+            // 숫자를 찾아내라. 좌표값 x의 좌표와 y의 좌표를 찾아라.
+            let x = e.pageX
+            let y = e.pageY
+
+            // point의 위치가 x,y의 값, 마우스를 따라다니게 하는 명려어
+            $('.point').css({'left':x,'top':y})
+
+
+            // 한가지 명령어가 적용된 뒤 제거되지 않으면 다른 명령어가 적용되지 않음
+            // 두가지 명령어가 겹쳐 보이지 않는 경우가 있어 add/removeclass 활용한다.
+            $('.box').mouseenter(function(){
+                // $('.point').css({'width':'10px', 'height':'10px'})
+                $('.point').addClass('on')
+            })
+            $('.box').mouseleave(function(){
+                // $('.point').css({'width':'50px', 'height':'50px'})
+                $('.point').removeClass('on')
+            })
+
+
+            $('.boxy').mouseenter(function(){
+                // $('.point').css({'width':'100px', 'height':'100px'})
+                $('.point').addClass('on2')
+            })
+            $('.boxy').mouseleave(function(){
+                // $('.point').css({'width':'50px', 'height':'50px'})
+                $('.point').removeClass('on2')
+            })
+            
+
+            $('.boxg').mouseenter(function(){
+                // $('.point').css({'width':'15px', 'height':'30px'})
+                $('.point').addClass('on3')
+            })
+            $('.boxg').mouseleave(function(){
+                // $('.point').css({'width':'50px', 'height':'50px'})
+                $('.point').removeClass('on3')
+            })
+
+
+        })
+    })
+</script>
+
+
+
+</body>
+</html>
